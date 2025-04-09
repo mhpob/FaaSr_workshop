@@ -79,12 +79,25 @@ In RStudio, navigate to the FaaSr_workshop folder, then set it as the working di
 
 Run one of the following commands, depending on your setup (Posit, or local Docker). Fair warning: it will take a few minutes to install all dependences:
 
-## For Posit Cloud:
+### For Posit Cloud:
 
 ```
 source('posit_setup_script')
 ```
-This process can take a few minutes!
+
+### For local Docker
+
+```
+source('rocker_setup_script')
+```
+
+### For Rstudio desktop
+
+If you are using Rstudio natively in your desktop, without Docker (*note: you may need to install the sodium library separately for your system*):
+
+```
+source('rstudio_setup_script')
+```
 
 ## Configure Rstudio to use GitHub Token
 
