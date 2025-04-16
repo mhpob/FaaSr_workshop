@@ -1,20 +1,14 @@
-# Introduction
-
-FaaSr is a package that makes it easy for developers to create R functions and workflows that can run in the cloud, on-demand, based on triggers - such as timers, or repository commits. It is built for Function-as-a-Service (FaaS) cloud computing, and supports both widely-used commercial (GitHub Actions, AWS Lambda, IBM Cloud) and open-source platforms (OpenWhisk). It is also built for cloud storage, and supports the S3 standard also widely used in commercial (AWS S3), open-source (Minio) and research platforms (Open Storage Network). With FaaSr, you can focus on developing the R functions, and leave dealing with the idiosyncrasies of different FaaS platforms and their APIs to the FaaSr package.
-
 # Objective
 
-This guide helps you through the setup and execution of a FaaSr workflow using [neon4cast package](https://github.com/eco4cast/neon4cast). In this tutorial, you will learn how to describe, configure, and execute a FaaSr workflow of R functions in the cloud, using GitHub Actions for cloud execution of functions, and a public Minio S3 “bucket” for cloud data storage. With the knowledge gained from this tutorial, you will be able to also run FaaSr workflows in OpenWhisk and Amazon Lambda, as well as use an S3-compliant bucket of your choice. 
+We will use this repository as a part of hands on activity for the FaaSr workshop. This tutorial will help you through the setup and execution of a FaaSr workflow using [neon4cast package](https://github.com/eco4cast/neon4cast). You will learn how to describe, configure, and execute a FaaSr workflow of R functions in the cloud, using GitHub Actions for cloud execution of functions, and a public Minio S3 “bucket” for cloud data storage. With the knowledge gained from this tutorial, you will be able to also run FaaSr workflows in OpenWhisk and Amazon Lambda, as well as use an S3-compliant bucket of your choice. 
 
 
-# Prerequisite requirements
-
-This tutorial is designed to work with either a Posit Cloud instance (recommended), or the [rocker/rstudio Docker container](https://rocker-project.org/) (on your own computer). You can also run this tutorial from your existing RStudio environment - you will need to install devtools, sodium, minioclient, and credentials packages for FaaSr.
+# Pre-workshop requirements
 
 Before we start running the workflow, you need to complete some prerequisites and keep the following things ready.
 - A Github account
-- A Github personal access token (PAT)
-    - While you can use your existing GitHub PAT if you have one, it is recommended that you create a short-lived GitHub PAT token for this tutorial if you plan to use Posit Cloud. [Detailed instructions to create a PAT are available here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic); in summary:
+- A Github Personal Access Token (PAT)
+    - Create a short-lived GitHub PAT for this tutorial. [Detailed instructions to create a PAT are available here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic); in summary:
   
     * In the upper-right corner of any page, click your profile photo, then click Settings.
     * In the left sidebar, click Developer settings.
@@ -22,16 +16,16 @@ Before we start running the workflow, you need to complete some prerequisites an
     * Click Generate new token (Classic); *note: make sure to select Classic*
     * In the "Note" field, give your token a descriptive name.
     * In scopes, select “workflow” and “read:org” (under admin:org). 
-    * Copy and paste the token; you will need to save it to a file in your computer for use in the tutorial
+    * Copy and paste the token; as you will need to save it to a file in your computer for use in the tutorial
 - a Minio S3 bucket (you can use the [Play Console](https://min.io/docs/minio/linux/administration/minio-console.html#minio-console) to use a public/unauthenticated server)
-    * You can try out the Minio Console using https://play.min.io:9443. Log in with the following credentials:
-    ```
-    Username: Q3AM3UQ867SPQQA43P2F
-    Password: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG
-    ```
-
-- RStudio on Posit Cloud (recommended) or a local Docker-based installation. 
-
+- RStudio on Posit Cloud
+    * [Click here](https://posit.cloud/) to open posit cloud in your browser window
+    * Click on the "Learn more" button under the Free tier
+    * Click on the Sign up button on the next page
+    * Click on "Sign up with GitHub" button
+    * Authorize posit cloud by clicking on the "Authorize-posit" button
+    * Enter your github credentials when prompted
+    * You should see the following screen once done: ![image](https://github.com/user-attachments/assets/ae6717ea-fe79-4c25-8451-d88b4ccef643)
 
 # Start your Rstudio session on Posit Cloud, or local Docker
 
