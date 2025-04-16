@@ -3,7 +3,7 @@
         "My_GitHub_Account": {
             "FaaSType": "GitHubActions",
             "UserName": "YOUR_GITHUB_USERNAME",
-            "ActionRepoName": "neon4cast_faasr_actions",
+            "ActionRepoName": "FaaSr_workshop_actions",
             "Branch": "main"
         }
     },
@@ -20,7 +20,7 @@
             "FunctionName": "get_target_data",
             "FaaSServer": "My_GitHub_Account",
             "Arguments": {
-                "folder": "neon4cast",
+                "folder": "FaaSr_workshop",
                 "output_target": "aquatic_full.csv",
                 "output_blinded": "blinded_aquatic.csv"
             },
@@ -33,7 +33,7 @@
             "FunctionName": "create_oxygen_forecast_rw",
             "FaaSServer": "My_GitHub_Account",
             "Arguments": {
-                "folder": "neon4cast",
+                "folder": "FaaSr_workshop",
                 "input_file": "blinded_aquatic.csv",
                 "output_file": "oxygen_fc_rw.csv"
             },
@@ -43,7 +43,7 @@
             "FunctionName": "create_temperature_forecast_rw",
             "FaaSServer": "My_GitHub_Account",
             "Arguments": {
-                "folder": "neon4cast",
+                "folder": "FaaSr_workshop",
                 "input_file": "blinded_aquatic.csv",
                 "output_file": "temperature_fc_rw.csv"
             },
@@ -53,7 +53,7 @@
             "FunctionName": "combine_forecasts_rw",
             "FaaSServer": "My_GitHub_Account",
             "Arguments": {
-                "folder": "neon4cast",
+                "folder": "FaaSr_workshop",
                 "input_oxygen": "oxygen_fc_rw.csv",
                 "input_temperature": "temperature_fc_rw.csv",
                 "output_file": "rw_forecast_combined.csv"
@@ -61,19 +61,19 @@
         }
     },
    "ActionContainers": {
-        "getData": "ghcr.io/faasr/github-actions-tidyverse:1.4.1",
-        "oxygenForecast": "ghcr.io/faasr/github-actions-tidyverse:1.4.1",
-        "temperatureForecast": "ghcr.io/faasr/github-actions-tidyverse:1.4.1",
-        "combineForecast": "ghcr.io/faasr/github-actions-tidyverse:1.4.1"
+        "getData": "ghcr.io/faasr/github-actions-tidyverse",
+        "oxygenForecast": "ghcr.io/faasr/github-actions-tidyverse",
+        "temperatureForecast": "ghcr.io/faasr/github-actions-tidyverse",
+        "combineForecast": "ghcr.io/faasr/github-actions-tidyverse"
     },
     "FunctionGitRepo": {
-        "get_target_data": "dekkov/neon4cast_faasr",
-        "create_oxygen_forecast_rw": "dekkov/neon4cast_faasr",
-        "create_temperature_forecast_rw": "dekkov/neon4cast_faasr",
-        "combine_forecasts_rw": "dekkov/neon4cast_faasr"
+        "get_target_data": "Ashish-Ramrakhiani/FaaSr_workshop",
+        "create_oxygen_forecast_rw": "Ashish-Ramrakhiani/FaaSr_workshop",
+        "create_temperature_forecast_rw": "Ashish-Ramrakhiani/FaaSr_workshop",
+        "combine_forecasts_rw": "Ashish-Ramrakhiani/FaaSr_workshop"
     },
     "FunctionInvoke": "getData",
-    "FaaSrLog": "FaaSrLog",
+    "FaaSrLog": "FaaSr_workshop_log",
     "LoggingDataStore": "My_Minio_Bucket",
     "DefaultDataStore": "My_Minio_Bucket",
     "FunctionGitHubPackage": {
