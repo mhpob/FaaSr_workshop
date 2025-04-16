@@ -27,42 +27,18 @@ Before we start running the workflow, you need to complete some prerequisites an
     * Enter your github credentials when prompted
     * You should see the following screen once done: ![image](https://github.com/user-attachments/assets/ae6717ea-fe79-4c25-8451-d88b4ccef643)
 
-# Start your Rstudio session on Posit Cloud, or local Docker
-
-## For Posit Cloud
+# Start your Rstudio session on Posit Cloud
 
 [Login with your GitHub account](https://posit.cloud/login), and then [navigate to your Posit workspace](https://posit.cloud/content/yours?sort=name_asc). Click on New Project, and select "New RStudio Project". This will start RStudio and connect you to it through your browser.
 
-## For local Docker
-
-"Pull" and run the Rocker RStudio container with the following command in your terminal (note: set your own password by replacing "yourpassword"):
-
-```
-docker pull rocker/rstudio
-docker run --rm -ti -e ROOT=true -e PASSWORD=yourpassword -p 8787:8787 rocker/rstudio
-```
-
-*Note for Mac M1/2/3 users: currently the Arm64 version of the Rocker container fails to install devtools; the commands below download and run an amd64-based Rocker that works with this tutorial:*
-
-```
-docker pull --platform linux/amd64 rocker/rstudio
-docker run --rm -ti --platform linux/amd64 -e ROOT=true -e PASSWORD=yourpassword -p 8787:8787 rocker/rstudio
-```
-
-Then, point your browser to http://localhost:8787 and log in (username is rstudio and use the password you provided in the command above)
-
-
-*Note: don't forget to terminate your Posit Cloud session (click on the "Trash" next to your workspace) or your Docker container (ctrl-C on the terminal) at the end of the tutorial*
-
-# Deploy a ecological FaaSr workflow.
-
+# Configuring & deploying a FaaSr workflow.
 
 ## Clone the FaaSr workshop repo
 
 First let's clone the FaaSr workshop repo - copy and paste this command in the R console:
 
 ```
-system('git clone https://github.com/dekkov/neon4cast_faasr.git')
+system('git clone ')
 ```
 
 In RStudio, navigate to the FaaSr_workshop folder, then set it as the working directory (More > Set as Working Directory).
