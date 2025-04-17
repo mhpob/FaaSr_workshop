@@ -66,7 +66,7 @@ Now set your GitHub token as a credential for use with Rstudio - paste your toke
 credentials::set_github_pat()
 ```
 
-## Configure the FaaSr secrets file with your GitHub token
+## Configure FaaSr secrets file with your GitHub token
 
 Open the file named "faasr_env" in a editor. You need to paste your GitHub token here: replace the string REPLACE_WITH_YOUR_GITHUB_TOKEN with your GitHub PAT, and save this file. 
 
@@ -103,10 +103,10 @@ Head over to files tab and open the `neon_workflow.json` file. This file stores 
 
 ## Register and invoke a simple workflow with GitHub Actions
 
-Now you're ready for some Action! The steps below will:
+Now you're ready for some Action! The below steps will:
 
 * Use the faasr function in the FaaSr library to load the neon_workflow.json and faasr_env in a list called faasr_workshop
-* Use the register_workflow() function to create a repository called FaaSr_workshop_actions in GitHub, and configure the workflow there using GitHub Actions
+* Use the register_workflow() function to create a repository called FaaSr_workshop_actions in GitHub, and configure the workflow using GitHub Actions
 * Use the invoke_workflow() function to invoke the execution of your workflow
 
 Paste the following commands to your console:
@@ -122,9 +122,25 @@ When prompted, select "public" to create a public repository. Now to invoke the 
 faasr_workshop$invoke_workflow()
 ```
 
-## Check if action is successful
+Head over to the github repository `FaaSr_workshop_actions` just created by FaaSr in your Github profile, go to the Actions page to see if all your actions have run successfully. 
 
-Head over to the github repo `FaaSr_workshop_actions` just created by FaaSr in your Github profile, go to the Actions page to see if your actions have run successfully. 
+This simple workflow you just executed consists of four R functions: 
+
+1. `get_target_data.R` - Downloads and processes the aquatic dataset, creating two CSV files:
+   - `aquatic_full.csv`: The complete dataset organized by datetime and site ID
+   - `blinded_aquatic.csv`: A training dataset that excludes the most recent 35 days, used for forecast development
+
+2. `create_oxygen_forecast_rw.R` - Generates oxygen forecasts saved as `oxygen_fc_rw.csv`
+
+3. `create_temperature_forecast_rw.R` - Generates temperature forecasts saved as `temperature_fc_rw.csv`
+
+4. `combine_forecasts_rw.R` - Merges the oxygen and temperature forecasts into a single output file: `rw_forecast_combined.csv`
+
+## Browse the S3 Data Store to view outputs
+
+### Using Minio console
+
+
 When all the runs are successful, you can explore the forecast files generated in Minio by visiting https://play.min.io:9443. Log in with the following credentials:
 ```
 Username: Q3AM3UQ867SPQQA43P2F
@@ -132,5 +148,20 @@ Password: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG
 ```
 
 Look for the FaaSr_workshop folder in the faasr bucket, you should be able to see the forecast files created by the workflow.
+
+### Using Minio client
+
+You can also use the mc_ls command to browse the outputs in the console:
+
+```
+mc_ls("play/faasr/FaaSr_workshop")
+mc_cat("play/faasr/FaaSr_workshop/blinded_aquatic.csv")
+mc_cat("play/faasr/FaaSr_workshop/oxygen_fc_rw.csv")
+mc_cat("play/faasr/FaaSr_workshop/temperature_fc_rw.csv")
+mc_cat("play/faasr/FaaSr_workshop/rw_forecast_combined.csv")
+
+```
+
+
 
 
