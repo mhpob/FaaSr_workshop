@@ -2,6 +2,12 @@
 install.packages('devtools')
 library('devtools')
 
+# install dependences - sodium
+system('./install_sodium.sh')
+install.packages('sodium')
+dyn.load('/cloud/project/FaaSr_workshop/libsodium-1.0.18/src/libsodium/.libs/libsodium.so.23')
+library('sodium')
+
 # install dependences - minioclient
 options(timeout=360)
 install.packages('minioclient')
@@ -15,11 +21,4 @@ library('FaaSr')
 
 # add credentials library
 library('credentials')
-
-# install dependences - sodium
-system('./install_sodium.sh')
-install.packages('sodium')
-dyn.load('/cloud/project/neon4cast_faasr/libsodium-1.0.18/src/libsodium/.libs/libsodium.so.23')
-library('sodium')
-
 
