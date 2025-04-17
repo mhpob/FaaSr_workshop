@@ -68,7 +68,7 @@ credentials::set_github_pat()
 
 ## Configure the FaaSr secrets file with your GitHub token
 
-Open the file named "faasr_env" in a editor. You need to paste your GitHub token here: replace the string "REPLACE_WITH_YOUR_GITHUB_TOKEN" with your GitHub PAT, and save this file. 
+Open the file named "faasr_env" in a editor. You need to paste your GitHub token here: replace the string REPLACE_WITH_YOUR_GITHUB_TOKEN with your GitHub PAT, and save this file. 
 
 This secrets file stores all the credentials we will use for this FaaSr workflow. You will notice that this file has some pre-populated credentials (secret key, access key) to access the Minio "play" bucket.
 
