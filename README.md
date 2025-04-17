@@ -101,36 +101,36 @@ Head over to files tab and open the `neon_workflow.json` file. This file stores 
     - This action marks the end of the workflow
 
 
-## Register and invoke the simple workflow with GitHub Actions
+## Register and invoke a simple workflow with GitHub Actions
 
 Now you're ready for some Action! The steps below will:
 
-* Use the faasr function in the FaaSr library to load the neon_workflow.json and faasr_env in a list called neon4cast_tutorial
-* Use the register_workflow() function to create a repository called neon4cast_faasr_actions in GitHub, and configure the workflow there using GitHub Actions
+* Use the faasr function in the FaaSr library to load the neon_workflow.json and faasr_env in a list called faasr_workshop
+* Use the register_workflow() function to create a repository called FaaSr_workshop_actions in GitHub, and configure the workflow there using GitHub Actions
 * Use the invoke_workflow() function to invoke the execution of your workflow
 
 Paste the following commands to your console:
 
 ```
-neon4cast_tutorial<- faasr(json_path="neon_workflow.json", env="faasr_env")
-neon4cast_tutorial$register_workflow()
+faasr_workshop<- faasr(json_path="neon_workflow.json", env="faasr_env")
+faasr_workshop$register_workflow()
 ```
 
 When prompted, select "public" to create a public repository. Now to invoke the workflow, run the following command:
 
 ```
-neon4cast_tutorial$invoke_workflow()
+faasr_workshop$invoke_workflow()
 ```
 
 ## Check if action is successful
 
-Head over to the github repo `neon4cast_faasr_actions` just created by FaaSr, go to actions page to see if your actions has successfully run. 
-If the runs are successful, you can explore the Console using https://play.min.io:9443. Log in with the following credentials:
+Head over to the github repo `FaaSr_workshop_actions` just created by FaaSr in your Github profile, go to the Actions page to see if your actions have run successfully. 
+When all the runs are successful, you can explore the forecast files generated in Minio by visiting https://play.min.io:9443. Log in with the following credentials:
 ```
 Username: Q3AM3UQ867SPQQA43P2F
 Password: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG
 ```
 
-Look for the neon4cast folder in faasr bucket, you should be able to see the forecasts you have just created.
+Look for the FaaSr_workshop folder in the faasr bucket, you should be able to see the forecast files created by the workflow.
 
 
