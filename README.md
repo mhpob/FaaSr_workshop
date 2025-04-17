@@ -41,9 +41,9 @@ First let's clone the FaaSr workshop repo - copy and paste this command in the R
 system('git clone https://github.com/Ashish-Ramrakhiani/FaaSr_workshop.git')
 ```
 
-In RStudio, navigate to the FaaSr_workshop folder, then set it as the working directory (More > Set as Working Directory).
+In RStudio, Click on FaaSr_workshop folder on the lower right window (Files), then
 
-
+Select More > Set as Working Directory from the drop down menu.
 
 ## Source the script that sets up FaaSr and dependences
 
