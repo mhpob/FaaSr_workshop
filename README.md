@@ -1,6 +1,6 @@
 # Objective
 
-We will use this repository as a part of hands on activity for the FaaSr workshop. This tutorial will help you through the setup and execution of a FaaSr workflow using [neon4cast package](https://github.com/eco4cast/neon4cast). You will learn how to describe, configure, and execute a FaaSr workflow of R functions in the cloud, using GitHub Actions for cloud execution of functions, and a public Minio S3 “bucket” for cloud data storage. With the knowledge gained from this tutorial, you will be able to also run FaaSr workflows in OpenWhisk and Amazon Lambda, as well as use an S3-compliant bucket of your choice. 
+We will use this repository as a part of hands on activity for the FaaSr workshop. This tutorial will help you through the setup and execution of a FaaSr workflow using [neon4cast package](https://github.com/eco4cast/neon4cast). You will learn how to describe, configure, and execute a FaaSr workflow of R functions in the cloud, using GitHub Actions for excuting functions in the cloud, and a public Minio S3 “bucket” for cloud data storage. With the knowledge gained from this tutorial, you will be able to also run FaaSr workflows in OpenWhisk and Amazon Lambda, as well as use an S3-compliant bucket of your choice. 
 
 
 # Pre-workshop requirements
@@ -70,11 +70,11 @@ credentials::set_github_pat()
 
 Open the file named "faasr_env" in a editor. You need to paste your GitHub token here: replace the string REPLACE_WITH_YOUR_GITHUB_TOKEN with your GitHub PAT, and save this file. 
 
-This secrets file stores all the credentials we will use for this FaaSr workflow. You will notice that this file has some pre-populated credentials (secret key, access key) to access the Minio "play" bucket.
+This secrets file stores all the credentials we will use for this FaaSr workflow. You will notice that this file has some pre-populated credentials (secret key, access key) to access the Minio bucket.
 
 ## Configure the FaaSr JSON workflow
 
-Head over to files tab and open the `neon_workflow.json` file. This file stores the workflow configuration. Replace "YOUR_GITHUB_USERNAME" with your github username in the "UserName" property of the "ComputeServers" section. A workflow has already been configured for you, shown in the image attached below. For additional information, please refer to [this schema](https://github.com/FaaSr/FaaSr-package/blob/main/schema/FaaSr.schema.json).
+Head over to the files tab and open the `neon_workflow.json` file. This file stores the workflow configuration. Replace YOUR_GITHUB_USERNAME with your github username in the "UserName" property of the "ComputeServers" section. A workflow has already been configured for you, shown in the image attached below. For additional information, please refer to [this schema](https://github.com/FaaSr/FaaSr-package/blob/main/schema/FaaSr.schema.json).
 
 ![image](https://github.com/user-attachments/assets/da1f0143-9387-431c-b466-818ddd943d67)
 
@@ -105,7 +105,7 @@ Head over to files tab and open the `neon_workflow.json` file. This file stores 
 
 Now you're ready for some Action! The below steps will:
 
-* Use the faasr function in the FaaSr library to load the neon_workflow.json and faasr_env in a list called faasr_workshop
+* Use the faasr function from the FaaSr library to load neon_workflow.json and faasr_env in a list called faasr_workshop
 * Use the register_workflow() function to create a repository called FaaSr_workshop_actions in GitHub, and configure the workflow using GitHub Actions
 * Use the invoke_workflow() function to invoke the execution of your workflow
 
