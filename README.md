@@ -7,6 +7,7 @@ We will use this repository as a part of hands on activity for the FaaSr worksho
 
 Before we start running the workflow, you need to complete some prerequisites and keep the following things ready.
 - A Github account
+    - You most likely already have one, but in case you don't, you will need to create an account
 - A Github Personal Access Token (PAT)
     - Create a short-lived GitHub PAT for this tutorial. [Detailed instructions to create a PAT are available here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic); in summary:
   
@@ -17,7 +18,7 @@ Before we start running the workflow, you need to complete some prerequisites an
     * In the "Note" field, give your token a descriptive name.
     * In scopes, select “workflow” and “read:org” (under admin:org). 
     * Copy and paste the token; as you will need to save it to a file in your computer for use in the tutorial
-- a Minio S3 bucket (you can use the [Play Console](https://min.io/docs/minio/linux/administration/minio-console.html#minio-console) to use a public/unauthenticated server)
+
 - RStudio on Posit Cloud
     * [Click here](https://posit.cloud/) to open posit cloud in your browser window
     * Click on the "Learn more" button under the Free tier
@@ -26,6 +27,13 @@ Before we start running the workflow, you need to complete some prerequisites an
     * Authorize posit cloud by clicking on the "Authorize-posit" button
     * Enter your github credentials when prompted
     * You should see the following screen once done: ![image](https://github.com/user-attachments/assets/ae6717ea-fe79-4c25-8451-d88b4ccef643)
+- An S3 cloud storage bucket
+     - We will provide you with credentials of a free temporary bucket during the workshop, so you don't need to do anything at this point
+     
+**You have now completed all the pre-workshop activities!**
+
+***
+# Workshop Day Activities
 
 # Start your Rstudio session on Posit Cloud
 
