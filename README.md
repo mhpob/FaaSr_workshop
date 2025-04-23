@@ -82,7 +82,7 @@ This secrets file stores all the credentials we will use for this FaaSr workflow
 
 ## Configure the FaaSr JSON workflow
 
-Head over to the files tab and open the `neon_workflow.json` file. This file stores the workflow configuration. Replace YOUR_GITHUB_USERNAME with your github username in the "UserName" property of the "ComputeServers" section. A workflow has already been configured for you, shown in the image attached below. For additional information, please refer to [this schema](https://github.com/FaaSr/FaaSr-package/blob/main/schema/FaaSr.schema.json).
+Head over to the files tab and open the neon_workflow.json file. This file stores the workflow configuration. Replace YOUR_GITHUB_USERNAME with your github username in the "UserName" property of the "ComputeServers" section. Next, update the "folder" parameter in all four functions by replacing "yourname" with your actual name (for example, change "FaaSr_workshop_yourname" to "FaaSr_workshop_jane"). This ensures your output files will be correctly stored in your personal directory on S3. A workflow has already been configured for you, shown in the image attached below. For additional information, please refer to [this schema](https://github.com/FaaSr/FaaSr-package/blob/main/schema/FaaSr.schema.json).
 
 ![image](https://github.com/user-attachments/assets/da1f0143-9387-431c-b466-818ddd943d67)
 
@@ -160,6 +160,7 @@ Look for the FaaSr_workshop folder in the faasr bucket, you should be able to se
 ### Using Minio client
 
 You can also use the mc_ls command to browse the outputs in the console:
+Remember to replace "yourname" with your actual name in these commands, just as you did in the configuration file.
 
 ```
 mc_ls("play/faasr/FaaSr_workshop_yourname")
