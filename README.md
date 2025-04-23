@@ -12,7 +12,7 @@ Before we start running the workflow, you need to complete some prerequisites an
     - Create a short-lived GitHub PAT for this tutorial. [Detailed instructions to create a PAT are available here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic); in summary:
   
     * In the upper-right corner of any page, click your profile photo, then click Settings.
-    * In the left sidebar, click Developer settings.
+    * In the left sidebar, scroll all the way to the bottom and click Developer settings.
     * In the left sidebar, click Personal access tokens (Classic).
     * Click Generate new token (Classic); *note: make sure to select Classic*
     * In the "Note" field, give your token a descriptive name.
