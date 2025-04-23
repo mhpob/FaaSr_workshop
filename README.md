@@ -162,11 +162,11 @@ Look for the FaaSr_workshop folder in the faasr bucket, you should be able to se
 You can also use the mc_ls command to browse the outputs in the console:
 
 ```
-mc_ls("play/faasr/FaaSr_workshop")
-mc_cat("play/faasr/FaaSr_workshop/blinded_aquatic.csv")
-mc_cat("play/faasr/FaaSr_workshop/oxygen_fc_rw.csv")
-mc_cat("play/faasr/FaaSr_workshop/temperature_fc_rw.csv")
-mc_cat("play/faasr/FaaSr_workshop/rw_forecast_combined.csv")
+mc_ls("play/faasr/FaaSr_workshop_yourname")
+mc_cat("play/faasr/FaaSr_workshop_yourname/blinded_aquatic.csv")
+mc_cat("play/faasr/FaaSr_workshop_yourname/oxygen_fc_rw.csv")
+mc_cat("play/faasr/FaaSr_workshop_yourname/temperature_fc_rw.csv")
+mc_cat("play/faasr/FaaSr_workshop_yourname/rw_forecast_combined.csv")
 
 ```
 
