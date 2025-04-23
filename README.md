@@ -130,7 +130,11 @@ When prompted, select "public" to create a public repository. Now to invoke the 
 faasr_workshop$invoke_workflow()
 ```
 
-Head over to the github repository `FaaSr_workshop_actions` just created by FaaSr in your Github profile, go to the Actions page to see if all your actions have run successfully. 
+Head over to the GitHub repository `FaaSr_workshop_actions` that was just created by FaaSr in your GitHub profile. Click on the "Actions" tab in the repository navigation bar to monitor your workflow execution status.
+You should see a list of workflow runs with their status indicators. Look for completed runs with green checkmarks, which indicate successful execution of all steps in your forecast workflow.
+The screenshot below shows how a successful workflow execution should appear:
+
+![Screenshot from 2025-04-23 13-39-28](https://github.com/user-attachments/assets/75c645ef-ab49-46b7-b96a-80e541d697a2)
 
 This simple workflow you just executed consists of four R functions: 
 
@@ -155,7 +159,7 @@ Username: Q3AM3UQ867SPQQA43P2F
 Password: zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG
 ```
 
-Look for the FaaSr_workshop folder in the faasr bucket, you should be able to see the forecast files created by the workflow.
+Search for the bucket named "faasr" and look for the "FaaSr_workshop_yourname" folder in the faasr bucket, you should be able to see the forecast files created by the workflow.
 
 ### Using Minio client
 
