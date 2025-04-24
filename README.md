@@ -1,6 +1,21 @@
 # Objective
 
-We will use this repository as a part of hands on activity for the FaaSr workshop. This tutorial will help you through the setup and execution of a FaaSr workflow using [neon4cast package](https://github.com/eco4cast/neon4cast). You will learn how to describe, configure, and execute a FaaSr workflow of R functions in the cloud, using GitHub Actions for excuting functions in the cloud, and a public Minio S3 “bucket” for cloud data storage. With the knowledge gained from this tutorial, you will be able to also run FaaSr workflows in OpenWhisk and Amazon Lambda, as well as use an S3-compliant bucket of your choice. 
+We will use this repository as a part of the hands-on activity for the FaaSr workshop at EFI 2025. 
+
+This tutorial will guide you through the setup and execution of your first [FaaSr](https://faasr.io) workflow using an example of a simple forecast based on the README documentation of the [neon4cast package](https://github.com/eco4cast/neon4cast). The example performs the following steps as R functions that are composed into a FaaSr workflow deployable on GitHub Actions:
+
+- Download and process target data to prep for model training and forecasts
+- Generate forecast of variable A (temperature)
+- Generation forecast of variable B (oxygen)
+- Combine forecasts into a single file for submission to NEON Challenge
+
+Through this activity, you will learn how to:
+
+- Install the FaaSr package on an Rstudio environment
+- Describe and configure a FaaSr workflow that combines R functions
+- Execute the workflow in the cloud, using GitHub Actions
+- Use a publically accessible S3 cloud storage using a Minio “bucket” for cloud data storage
+- With the knowledge gained from this tutorial, you will be able to also run FaaSr workflows in OpenWhisk and Amazon Lambda, as well as use an S3-compliant bucket of your choice. 
 
 
 # Pre-workshop requirements
@@ -58,7 +73,7 @@ Select More > Set as Working Directory from the drop down menu.
 Run following command, Fair warning: it will take a few minutes to install all dependences:
 
 ```
-source('posit_setup_script')
+source('posit_setup_script.R')
 ```
 ## Configure Rstudio to use GitHub Token
 
