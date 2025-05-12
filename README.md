@@ -73,7 +73,7 @@ Select More > Set as Working Directory from the drop down menu.
 Run following command, Fair warning: it will take a few minutes to install all dependences:
 
 ```
-source('posit_setup_script.R')
+source('posit_setup_script')
 ```
 ## Configure Rstudio to use GitHub Token
 
@@ -189,7 +189,3 @@ mc_cat("play/faasr/FaaSr_workshop_yourname/temperature_fc_rw.csv")
 mc_cat("play/faasr/FaaSr_workshop_yourname/rw_forecast_combined.csv")
 
 ```
-
-
-
-

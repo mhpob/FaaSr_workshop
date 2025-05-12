@@ -62,9 +62,9 @@
     },
    "ActionContainers": {
         "getData": "ghcr.io/faasr/github-actions-tidyverse",
-        "oxygenForecast": "ghcr.io/faasr/github-actions-tidyverse",
-        "temperatureForecast": "ghcr.io/faasr/github-actions-tidyverse",
-        "combineForecast": "ghcr.io/faasr/github-actions-tidyverse"
+        "oxygenForecastRandomWalk": "ghcr.io/faasr/github-actions-tidyverse",
+        "temperatureForecastRandomWalk": "ghcr.io/faasr/github-actions-tidyverse",
+        "combineForecastRandomWalk": "ghcr.io/faasr/github-actions-tidyverse"
     },
     "FunctionGitRepo": {
         "get_target_data": "Ashish-Ramrakhiani/FaaSr_workshop",
@@ -116,12 +116,6 @@
             "tidyverse",
             "glue"
         ]
-    },
-    "FunctionGitHubPackage": {
-        "get_target_data": [],
-        "create_oxygen_forecast_rw": [],
-        "create_temperature_forecast_rw": [],
-        "combine_forecasts_rw": []
     }
 }
 
