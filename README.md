@@ -75,19 +75,6 @@ Run following command, Fair warning: it will take a few minutes to install all d
 ```
 source('posit_setup_script')
 ```
-## Configure Rstudio to use GitHub Token
-
-Within Rstudio, configure the environment to use your GitHub account (replace with your username and email). Paste the following in the console:
-
-```
-usethis::use_git_config(user.name = "YOUR_GITHUB_USERNAME", user.email = "YOUR_GITHUB_EMAIL")
-```
-
-Now set your GitHub token as a credential for use with Rstudio - paste your token in the pop-up window that opens up when you run the following in your console:
-
-```
-credentials::set_github_pat()
-```
 
 ## Configure FaaSr secrets file with your GitHub token
 
