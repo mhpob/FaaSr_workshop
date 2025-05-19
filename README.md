@@ -50,6 +50,9 @@ Before we start running the workflow, you need to complete some prerequisites an
 ***
 # Workshop Day Activities
 
+# Complete a pre-workshop survey
+[Click here](https://forms.gle/GyCaMXR5Jjke4tr19) to access the pre-workshop survey. Complete "Section 1 pre-survey" and click on Next. Please keep this tab open as it will be needed to fill up a post-workshop survey at the end.
+
 # Start your Rstudio session on Posit Cloud
 
 [Login with your GitHub account](https://posit.cloud/login), and then [navigate to your Posit workspace](https://posit.cloud/content/yours?sort=name_asc). Click on New Project, and select "New RStudio Project". This will start RStudio and connect you to it through your browser.
@@ -176,3 +179,5 @@ mc_cat("play/faasr/FaaSr_workshop_yourname/temperature_fc_rw.csv")
 mc_cat("play/faasr/FaaSr_workshop_yourname/rw_forecast_combined.csv")
 
 ```
+# Complete a post-workshop survey
+Switch to the [survey](https://forms.gle/GyCaMXR5Jjke4tr19) tab again and complete "Section 2 post-survey". Thank you for attending the FaaSr workshop.
