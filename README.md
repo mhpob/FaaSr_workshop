@@ -172,11 +172,13 @@ You can also use the mc_ls command to browse the outputs in the console:
 Remember to replace "yourname" with your actual name in these commands, just as you did in the configuration file.
 
 ```
-mc_ls("play/faasr/FaaSr_workshop_yourname")
-mc_cat("play/faasr/FaaSr_workshop_yourname/blinded_aquatic.csv")
-mc_cat("play/faasr/FaaSr_workshop_yourname/oxygen_fc_rw.csv")
-mc_cat("play/faasr/FaaSr_workshop_yourname/temperature_fc_rw.csv")
-mc_cat("play/faasr/FaaSr_workshop_yourname/rw_forecast_combined.csv")
+mc_ls("play/faasr/FaaSr_workshop_mhpob")
+mc_cat("play/faasr/FaaSr_workshop_mhpob/blinded_aquatic.csv")
+mc_cat("play/faasr/FaaSr_workshop_mhpob/oxygen_fc_rw.csv")
+mc_cat("play/faasr/FaaSr_workshop_mhpob/temperature_fc_rw.csv") |> 
+  data.table::fread()
+mc_cat("play/faasr/FaaSr_workshop_mhpob/rw_forecast_combined.csv") |> 
+  data.table::fread()
 
 ```
 # Complete a post-workshop survey
